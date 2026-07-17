@@ -1,6 +1,4 @@
-package com.example.CampaignManager.model;
-
-import com.example.CampaignManager.modelDTO.monster.DamageTypeDTO;
+package com.example.CampaignManager.model.monster;
 
 public class Damage {
     private String name;

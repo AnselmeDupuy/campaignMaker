@@ -1,4 +1,4 @@
-package com.example.CampaignManager.model;
+package com.example.CampaignManager.model.monster;
 
 public class ActionReference {
     private String actionName;

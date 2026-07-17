@@ -1,5 +1,6 @@
 package com.example.CampaignManager.modelDTO.monster;
 
+import com.example.CampaignManager.modelDTO.ApiReferenceDTO;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -7,14 +8,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DamageDTO {
 
     @JsonProperty("damage_type")
-    private DamageTypeDTO damageType;
+    private ApiReferenceDTO damageType;
 
     @JsonProperty("damage_dice")
     private String damageDice;
 
     public DamageDTO() {}
 
-    public DamageTypeDTO getDamageType() {
+    public ApiReferenceDTO getDamageType() {
         return damageType;
     }
 
@@ -26,7 +27,7 @@ public class DamageDTO {
         this.damageDice = damageDice;
     }
 
-    public void setDamageType(DamageTypeDTO damageType) {
+    public void setDamageType(ApiReferenceDTO damageType) {
         this.damageType = damageType;
     }
 }

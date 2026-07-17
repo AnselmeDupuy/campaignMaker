@@ -1,6 +1,6 @@
 package com.example.CampaignManager.mapper.monster;
 
-import com.example.CampaignManager.model.Monster;
+import com.example.CampaignManager.model.monster.Monster;
 import com.example.CampaignManager.modelDTO.monster.MonsterDTO;
 
 public class MonsterMapper {
@@ -36,6 +36,9 @@ public class MonsterMapper {
         }
         if (dto.getSpecialAbilities() != null) {
             monster.setSpecialAbility(dto.getSpecialAbilities().stream().map(SpecialAbilityMapper::fromDTO).toList());
+        }
+        if (dto.getLegendaryActions() != null){
+            monster.setLegendaryAction(dto.getLegendaryActions().stream().map(ActionMapper::fromDTO).toList());
         }
 
         return monster;

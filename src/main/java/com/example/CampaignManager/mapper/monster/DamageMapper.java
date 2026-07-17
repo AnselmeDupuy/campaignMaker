@@ -1,6 +1,6 @@
 package com.example.CampaignManager.mapper.monster;
 
-import com.example.CampaignManager.model.Damage;
+import com.example.CampaignManager.model.monster.Damage;
 import com.example.CampaignManager.modelDTO.monster.DamageDTO;
 
 public class DamageMapper {

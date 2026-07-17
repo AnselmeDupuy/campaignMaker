@@ -1,6 +1,6 @@
 package com.example.CampaignManager.mapper.monster;
 
-import com.example.CampaignManager.model.Speed;
+import com.example.CampaignManager.model.monster.Speed;
 import com.example.CampaignManager.modelDTO.monster.SpeedDTO;
 
 public class SpeedMapper {

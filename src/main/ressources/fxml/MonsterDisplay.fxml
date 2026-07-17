@@ -133,8 +133,8 @@
                                              </GridPane.margin></Label>
                                        </children>
                                     </GridPane>
-                                    <Separator opacity="0.0" orientation="VERTICAL" prefHeight="210.0" prefWidth="146.0" visible="false" />
-                                    <GridPane fx:id="displayMonsterStat" gridLinesVisible="true" HBox.hgrow="ALWAYS">
+                                    <Separator maxWidth="250.0" opacity="0.0" orientation="VERTICAL" prefHeight="210.0" prefWidth="150.0" visible="false" />
+                                    <GridPane fx:id="displayMonsterStat" gridLinesVisible="true" maxWidth="150.0" HBox.hgrow="ALWAYS">
                                        <columnConstraints>
                                           <ColumnConstraints hgrow="NEVER" minWidth="10.0" prefWidth="100.0" />
                                           <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
@@ -206,7 +206,7 @@
                               <Separator />
                               <TitledPane fx:id="displayMonsterAbilities" animated="false" expanded="false" text="Abilities">
                                 <content>
-
+                                   <VBox fx:id="abilitiesBox" spacing="10" />
                                 </content>
                               </TitledPane>
                               <TitledPane fx:id="displayMonsterActions" animated="false" expanded="false" text="Actions">
@@ -216,12 +216,12 @@
                               </TitledPane>
                               <TitledPane fx:id="displayMonsterLegendaryActions" animated="false" expanded="false" text="LegendaryActions">
                                  <content>
-                                    <AnchorPane minHeight="0.0" minWidth="0.0" />
+                                    <VBox fx:id="legendaryActionsBox" spacing="10" />
                                  </content>
                               </TitledPane>
                               <TitledPane fx:id="displayMonsterProficiencies" animated="false" expanded="false" text="Proficiencies">
                                  <content>
-                                    <AnchorPane minHeight="0.0" minWidth="0.0" />
+                                    <VBox fx:id="proficienciesBox" spacing="10" />
                                  </content>
                               </TitledPane>
                            </children>

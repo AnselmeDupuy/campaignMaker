@@ -1,6 +1,4 @@
-package com.example.CampaignManager.model;
-
-import com.example.CampaignManager.modelDTO.monster.ActionReferenceDTO;
+package com.example.CampaignManager.model.monster;
 
 import java.util.List;
 

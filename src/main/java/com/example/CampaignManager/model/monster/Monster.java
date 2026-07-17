@@ -1,8 +1,10 @@
-package com.example.CampaignManager.model;
+package com.example.CampaignManager.model.monster;
+
+import com.example.CampaignManager.model.LibraryObject;
 
 import java.util.List;
 
-public class Monster {
+public class Monster implements LibraryObject {
 
     private String name;
     private String type;

@@ -1,5 +1,6 @@
 package com.example.CampaignManager.modelDTO.monster;
 
+import com.example.CampaignManager.modelDTO.ApiReferenceDTO;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -11,7 +12,7 @@ public class SpellcastingDTO {
 
     private int level;
 
-    private AbilityDTO ability;
+    private ApiReferenceDTO ability;
 
     private int dc;
 
@@ -24,7 +25,7 @@ public class SpellcastingDTO {
 
     private Map<String, Integer> slots;
 
-    private List<SpellDTO> spells;
+    private List<ApiReferenceDTO> spells;
 
     public SpellcastingDTO() {}
 
@@ -32,7 +33,7 @@ public class SpellcastingDTO {
         return level;
     }
 
-    public AbilityDTO getAbility() {
+    public ApiReferenceDTO getAbility() {
         return ability;
     }
 
@@ -56,7 +57,7 @@ public class SpellcastingDTO {
         return slots;
     }
 
-    public List<SpellDTO> getSpells() {
+    public List<ApiReferenceDTO> getSpells() {
         return spells;
     }
 
@@ -64,7 +65,7 @@ public class SpellcastingDTO {
         this.dc = dc;
     }
 
-    public void setAbility(AbilityDTO ability) {
+    public void setAbility(ApiReferenceDTO ability) {
         this.ability = ability;
     }
 
@@ -88,7 +89,7 @@ public class SpellcastingDTO {
         this.slots = slots;
     }
 
-    public void setSpells(List<SpellDTO> spells) {
+    public void setSpells(List<ApiReferenceDTO> spells) {
         this.spells = spells;
     }
 }
