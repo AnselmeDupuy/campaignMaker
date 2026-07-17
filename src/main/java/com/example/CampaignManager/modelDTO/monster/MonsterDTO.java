@@ -1,5 +1,7 @@
 package com.example.CampaignManager.modelDTO.monster;
 
+import com.example.CampaignManager.modelDTO.ApiReferenceDTO;
+import com.example.CampaignManager.modelDTO.ObjectIdDTO;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -53,7 +55,7 @@ public class MonsterDTO {
     private List<String> damageImmunities;
 
     @JsonProperty("condition_immunities")
-    private List<ConditionImmunityDTO> conditionImmunities;
+    private List<ApiReferenceDTO> conditionImmunities;
 
     private SenseDTO senses;
 
@@ -151,7 +153,7 @@ public class MonsterDTO {
         return damageImmunities;
     }
 
-    public List<ConditionImmunityDTO> getConditionImmunities() {
+    public List<ApiReferenceDTO> getConditionImmunities() {
         return conditionImmunities;
     }
 
@@ -327,7 +329,7 @@ public class MonsterDTO {
         this.specialAbilities = specialAbilities;
     }
 
-    public void setConditionImmunities(List<ConditionImmunityDTO> conditionImmunities) {
+    public void setConditionImmunities(List<ApiReferenceDTO> conditionImmunities) {
         this.conditionImmunities = conditionImmunities;
     }
 

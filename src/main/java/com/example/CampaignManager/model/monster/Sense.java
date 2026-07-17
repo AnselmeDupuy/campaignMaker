@@ -1,4 +1,7 @@
-package com.example.CampaignManager.model;
+package com.example.CampaignManager.model.monster;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Sense {
     private String blindSight;
@@ -19,6 +22,27 @@ public class Sense {
     public String getTrueSight() {return trueSight;}
 
     public int getPassivePerception() {return passivePerception;}
+
+    public List<String> getAllSenses() {
+        List<String> senses = new ArrayList<>();
+
+        senses.add("Passive Perception: " + passivePerception);
+
+        if (blindSight != null) {
+            senses.add("Blindsight: " + blindSight);
+        }
+        if (darkVision != null) {
+            senses.add("Darkvision: " + darkVision);
+        }
+        if (tremorSense != null) {
+            senses.add("Tremorsense: " + tremorSense);
+        }
+        if (trueSight != null) {
+            senses.add("Truesight: " + trueSight);
+        }
+
+        return senses;
+    }
 
     //setters
     public void setBlindSight(String blindSight) {this.blindSight = blindSight;}

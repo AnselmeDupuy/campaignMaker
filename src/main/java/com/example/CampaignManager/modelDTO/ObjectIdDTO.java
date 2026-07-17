@@ -1,4 +1,4 @@
-package com.example.CampaignManager.modelDTO.monster;
+package com.example.CampaignManager.modelDTO;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

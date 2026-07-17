@@ -1,6 +1,6 @@
 package com.example.CampaignManager.mapper.monster;
 
-import com.example.CampaignManager.model.ActionReference;
+import com.example.CampaignManager.model.monster.ActionReference;
 import com.example.CampaignManager.modelDTO.monster.ActionReferenceDTO;
 
 public class ActionReferenceMapper {

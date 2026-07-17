@@ -1,9 +1,11 @@
 package com.example.CampaignManager.modelDTO.monster;
 
+import com.example.CampaignManager.modelDTO.ApiReferenceDTO;
+
 public class ProficiencyEntryDTO {
 
     private int value;
-    private ProficiencyDTO proficiency;
+    private ApiReferenceDTO proficiency;
 
     public ProficiencyEntryDTO() {}
 
@@ -11,7 +13,7 @@ public class ProficiencyEntryDTO {
         return value;
     }
 
-    public ProficiencyDTO getProficiency() {
+    public ApiReferenceDTO getProficiency() {
         return proficiency;
     }
 
@@ -19,7 +21,7 @@ public class ProficiencyEntryDTO {
         this.value = value;
     }
 
-    public void setProficiency(ProficiencyDTO proficiency) {
+    public void setProficiency(ApiReferenceDTO proficiency) {
         this.proficiency = proficiency;
     }
 }

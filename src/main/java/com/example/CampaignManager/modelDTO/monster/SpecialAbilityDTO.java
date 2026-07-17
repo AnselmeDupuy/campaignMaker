@@ -1,5 +1,6 @@
 package com.example.CampaignManager.modelDTO.monster;
 
+import com.example.CampaignManager.modelDTO.DcDTO;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown = true)

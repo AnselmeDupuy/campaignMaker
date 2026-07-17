@@ -16,6 +16,7 @@ public class SenseDTO {
 
     public SenseDTO() {}
 
+    //Getters
     public int getPassivePerception() {
         return passivePerception;
     }
@@ -32,10 +33,9 @@ public class SenseDTO {
         return tremorsense;
     }
 
-    public String getTruesight() {
-        return truesight;
-    }
+    public String getTruesight() {return truesight;}
 
+    //Setters
     public void setBlindsight(String blindsight) {
         this.blindsight = blindsight;
     }

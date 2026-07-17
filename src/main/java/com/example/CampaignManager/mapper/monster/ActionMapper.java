@@ -1,13 +1,11 @@
 package com.example.CampaignManager.mapper.monster;
 
-import com.example.CampaignManager.model.Action;
+import com.example.CampaignManager.model.monster.Action;
 import com.example.CampaignManager.modelDTO.monster.ActionDTO;
 
 public class ActionMapper {
     public static Action fromDTO(ActionDTO dto) {
         Action action = new Action();
-
-
 
         action.setName(dto.getName());
         action.setDescription(dto.getDesc());

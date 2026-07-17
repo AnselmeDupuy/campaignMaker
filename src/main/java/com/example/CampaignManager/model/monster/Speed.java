@@ -1,4 +1,7 @@
-package com.example.CampaignManager.model;
+package com.example.CampaignManager.model.monster;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Speed {
 
@@ -20,6 +23,27 @@ public class Speed {
     public String getSwim() {return swim;}
 
     public String getWalk() {return walk;}
+
+    public List<String> getAllSpeeds() {
+        List<String> speeds = new ArrayList<>();
+        if (walk != null) {
+            speeds.add("Walk: " + walk);
+        }
+        if (burrow != null) {
+            speeds.add("Burrow: " + burrow);
+        }
+        if (swim != null) {
+            speeds.add("Swim: " + swim);
+        }
+        if (climb != null) {
+            speeds.add("Climb: " + climb);
+        }
+        if (fly != null) {
+            speeds.add("Fly: " + fly);
+        }
+
+        return speeds;
+    }
 
     //setters
 

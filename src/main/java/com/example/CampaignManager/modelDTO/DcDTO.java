@@ -1,4 +1,4 @@
-package com.example.CampaignManager.modelDTO.monster;
+package com.example.CampaignManager.modelDTO;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -7,7 +7,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DcDTO {
 
     @JsonProperty("dc_type")
-    private AbilityDTO dcType;
+    private ApiReferenceDTO dcType;
 
     @JsonProperty("dc_value")
     private int dcValue;
@@ -15,9 +15,13 @@ public class DcDTO {
     @JsonProperty("success_type")
     private String successType;
 
+    @JsonProperty("dc_success")
+    private String dcSuccess;
+
     public DcDTO() {}
 
-    public AbilityDTO getDcType() {
+    //Getter
+    public ApiReferenceDTO getDcType() {
         return dcType;
     }
 
@@ -29,7 +33,10 @@ public class DcDTO {
         return successType;
     }
 
-    public void setDcType(AbilityDTO dcType) {
+    public String getDcSuccess() {return dcSuccess;}
+
+    //Setter
+    public void setDcType(ApiReferenceDTO dcType) {
         this.dcType = dcType;
     }
 
@@ -40,4 +47,6 @@ public class DcDTO {
     public void setSuccessType(String successType) {
         this.successType = successType;
     }
+
+    public void setDcSuccess(String dcSuccess) {this.dcSuccess = dcSuccess;}
 }

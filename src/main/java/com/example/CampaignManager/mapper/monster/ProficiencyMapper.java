@@ -1,7 +1,6 @@
 package com.example.CampaignManager.mapper.monster;
 
-import com.example.CampaignManager.model.Proficiency;
-import com.example.CampaignManager.modelDTO.monster.ProficiencyDTO;
+import com.example.CampaignManager.model.monster.Proficiency;
 import com.example.CampaignManager.modelDTO.monster.ProficiencyEntryDTO;
 
 public class ProficiencyMapper {

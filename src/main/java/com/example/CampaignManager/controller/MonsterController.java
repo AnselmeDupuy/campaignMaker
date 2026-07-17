@@ -1,15 +1,12 @@
 package com.example.CampaignManager.controller;
 
-import com.example.CampaignManager.model.Action;
-import com.example.CampaignManager.model.ArmorClass;
-import com.example.CampaignManager.model.Monster;
+import com.example.CampaignManager.model.monster.*;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
-import javafx.scene.control.TextArea;
 import javafx.scene.control.TitledPane;
-import javafx.scene.layout.GridPane;
-import javafx.scene.layout.TilePane;
 import javafx.scene.layout.VBox;
+
+import java.util.List;
 
 
 public class MonsterController {
@@ -79,6 +76,14 @@ public class MonsterController {
     @FXML
     private VBox actionsBox;
 
+    @FXML VBox abilitiesBox;
+
+    @FXML
+    private VBox legendaryActionsBox;
+
+    @FXML
+    private VBox proficienciesBox;
+
 
     public void setMonster(Monster monster){
 
@@ -88,6 +93,22 @@ public class MonsterController {
         } else {
             displayMonsterLegendaryActions.setVisible(true);
             displayMonsterLegendaryActions.setManaged(true);
+
+            legendaryActionsBox.getChildren().clear();
+
+            for(Action action : monster.getLegendaryAction()){
+                VBox legendaryActionCard = new VBox(5);
+
+                Label name = new Label(action.getName());
+                name.setStyle("-fx-font-weight: bold; -fx-font-size: 14;");
+
+                Label description = new Label(action.getDescription());
+                description.setWrapText(true);
+                description.prefWidthProperty().bind(legendaryActionsBox.widthProperty().subtract(20));
+
+                legendaryActionCard.getChildren().addAll(name, description);
+                legendaryActionsBox.getChildren().add(legendaryActionCard);
+            }
         }
 
         monsterName.setText(monster.getName());
@@ -105,9 +126,11 @@ public class MonsterController {
             }
             gridArmorClass.setText(list);
         }
-        gridSpeed.setText(String.valueOf(monster.getSpeed()));
         gridSenses.setText(String.valueOf(monster.getSense()));
         gridLanguages.setText(monster.getLanguages());
+        gridSpeed.setText(monster.getSpeed().getAllSpeeds().toString());
+
+        gridSenses.setText(String.join(", ", monster.getSense().getAllSenses()));
 
         gridStatCharisma.setText(String.valueOf(monster.getCharisma()));
         gridStatStrength.setText(String.valueOf(monster.getStrength()));
@@ -119,8 +142,10 @@ public class MonsterController {
 
         //Display of arrays of actions
         actionsBox.getChildren().clear();
+        if (!monster.getAction().isEmpty()){
+            displayMonsterActions.setVisible(true);
+            displayMonsterActions.setManaged(true);
 
-        if (monster.getAction() != null){
             for (Action action : monster.getAction()){
                 VBox actionCard = new VBox(5);
 
@@ -134,6 +159,50 @@ public class MonsterController {
                 actionCard.getChildren().addAll(name, description);
                 actionsBox.getChildren().add(actionCard);
             }
+        } else {
+            displayMonsterActions.setVisible(false);
+            displayMonsterActions.setManaged(false);
+        }
+
+        //Display of Arrays of abilities
+        abilitiesBox.getChildren().clear();
+        if (!monster.getSpecialAbility().isEmpty()){
+            displayMonsterAbilities.setVisible(true);
+            displayMonsterAbilities.setManaged(true);
+            for (SpecialAbility ability : monster.getSpecialAbility()){
+                VBox abilityCard = new VBox(5);
+
+                Label name = new Label(ability.getName());
+                name.setStyle("-fx-font-weight: bold; -fx-font-size: 14;");
+
+                Label description = new Label(ability.getDescription());
+                description.setWrapText(true);
+                description.prefWidthProperty().bind(actionsBox.widthProperty().subtract(20));
+
+                abilityCard.getChildren().addAll(name, description);
+                abilitiesBox.getChildren().add(abilityCard);
+            }
+        } else {
+            displayMonsterAbilities.setVisible(false);
+            displayMonsterAbilities.setManaged(false);
+        }
+
+        proficienciesBox.getChildren().clear();
+        if (!monster.getProficiency().isEmpty()){
+            displayMonsterProficiencies.setVisible(true);
+            displayMonsterProficiencies.setManaged(true);
+
+            for(Proficiency proficiency : monster.getProficiency()){
+                VBox proficiencyCard = new VBox(5);
+                String proficiencyString = proficiency.getName() + ": " + proficiency.getValue();
+                Label name = new Label(proficiencyString);
+
+                proficiencyCard.getChildren().addAll(name);
+                proficienciesBox.getChildren().add(proficiencyCard);
+            }
+        } else {
+            displayMonsterProficiencies.setVisible(false);
+            displayMonsterProficiencies.setManaged(false);
         }
 
 

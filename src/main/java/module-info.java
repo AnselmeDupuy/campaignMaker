@@ -11,6 +11,11 @@ module com.example.CampaignManager {
     opens com.example.CampaignManager.controller to javafx.fxml;
 
     exports com.example.CampaignManager;
-    exports com.example.CampaignManager.model;
+    exports com.example.CampaignManager.modelDTO;
     exports com.example.CampaignManager.modelDTO.monster;
+    exports com.example.CampaignManager.model.monster;
+    exports com.example.CampaignManager.model;
+
+    exports com.example.CampaignManager.modelDTO.spell;
+    exports com.example.CampaignManager.model.spell;
 }
